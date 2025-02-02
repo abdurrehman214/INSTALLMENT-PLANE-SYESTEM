@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Installment Plans</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5 p-4">
+        <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-header bg-gradient bg-secondary text-white text-center rounded-top-4">
+                <h1 class="mb-0">Installment Plan</h1>
+            </div>
+            <div class="card-body">
+                <div class="mb-4">
+                    <label for="mp" class="form-label fw-bold text-secondary">Product Price</label>
+                    <input type="number" id="mp" class="form-control text-center" placeholder="Enter Product Price">
+                </div>
+                <div class="mb-4">
+                    <label for="int" class="form-label fw-bold text-secondary">Interest</label>
+                    <input type="number" id="int" class="form-control text-center" placeholder="Enter Interest Rate">
+                </div>
+                <div class="mb-4">
+                    <label for="per" class="form-label fw-bold text-secondary">Installment Period</label>
+                    <input type="number" id="per" class="form-control text-center" placeholder="Enter Installment Period">
+                </div>
+                <button class="btn btn-secondary w-100 rounded-pill" onclick="run()">Show Summary</button>
+            </div>
+        </div>
+        <div id="plan-summary" class="card mt-5 shadow-lg border-0 rounded-4 d-none">
+            <div class="card-header bg-gradient bg-secondary text-white text-center rounded-top-4">
+                <h3 class="mb-0">Plan Summary</h3>
+            </div>
+            <div id="summary-body" class="card-body d-none">
+                <h5 class="mb-3">Product Cost: <span id="t1" class="fw-bold text-primary">none</span><b style="color: rgb(29,110,253);">RS</b></h5>
+                <h5 class="mb-3">Interest Cost: <span id="t2" class="fw-bold text-primary">none</span><b style="color: rgb(29,110,253);">RS</b></h5>
+                <h5 class="mb-3">Total Cost: <span id="t3" class="fw-bold text-primary">none</span></h5>
+                <h5 class="mb-3">Installment Period: <span id="t4" class="fw-bold text-primary">none</span></h5>
+                <h5 class="mb-3">Monthly Cost: <span id="t5" class="fw-bold text-primary">none</span></h5>
+                <button class="btn btn-secondary w-100 rounded-pill" onclick="refresh()">Create New Plan</button>
+            </div>
+        </div>
+    </div>
+    
+    
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </script>
+    <script src="./script.js"></script>
+</html>
+
