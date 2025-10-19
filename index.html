@@ -16,16 +16,19 @@
                 <div class="mb-4">
                     <label for="mp" class="form-label fw-bold text-secondary">Product Price</label>
                     <input type="number" id="mp" class="form-control text-center" placeholder="Enter Product Price">
+                    <span id="msg1"></span><br><br>
                 </div>
                 <div class="mb-4">
                     <label for="int" class="form-label fw-bold text-secondary">Interest</label>
                     <input type="number" id="int" class="form-control text-center" placeholder="Enter Interest Rate">
-                </div>
+                    <span id="msg2"></span><br><br>         
+                    </div>
                 <div class="mb-4">
                     <label for="per" class="form-label fw-bold text-secondary">Installment Period</label>
                     <input type="number" id="per" class="form-control text-center" placeholder="Enter Installment Period">
+                    <span id="msg3"></span><br><br>
                 </div>
-                <button class="btn btn-secondary w-100 rounded-pill" onclick="run()">Show Summary</button>
+                <button class="btn btn-secondary w-100 rounded-pill" onclick="run();scrollToBottom();" POIN>Show Summary</button>
             </div>
         </div>
         <div id="plan-summary" class="card mt-5 shadow-lg border-0 rounded-4 d-none">
@@ -49,4 +52,12 @@
     </script>
     <script src="./script.js"></script>
 </html>
+<script>
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth' // for smooth scrolling
+    });
+  }
+</script>
 
